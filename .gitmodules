@@ -1,0 +1,6 @@
+[submodule "bootstrap-image-gallery"]
+	path = bootstrap-image-gallery
+	url = git://github.com/blueimp/Bootstrap-Image-Gallery.git
+[submodule "javascript-load-image"]
+	path = javascript-load-image
+	url = git://github.com/blueimp/JavaScript-Load-Image.git

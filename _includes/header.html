@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>{{ page.title }}</title>
+
+		<link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap.min.css">
+		<style type="text/css">
+			body {
+				padding-top: 60px;
+				padding-bottom: 40px;
+			}
+		</style>
+		<link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap-responsive.min.css">
+		<link rel="stylesheet" type="text/css" href="/bootstrap-image-gallery/css/bootstrap-image-gallery.min.css">
+		<!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	</head>
+	<body>
+		<div class="navbar navbar-fixed-top">
+			<div class="navbar-inner">
+				<div class="container">
+					<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</a>
+					<a class="brand" href="/">Gareth</a>
+					<div class="nav-collapse">
+						<ul class="nav">
+							<li{% if page.id == "home" %} class="active"{% endif %}><a href="/"><i class="icon-home icon-white"></i> Home</a></li>
+							<li{% if page.id == "screenshots" %} class="active"{% endif %}><a href="/screenshots.html"><i class="icon-picture icon-white"></i> Screnshots</a></li>
+							<li{% if page.id == "donate" %} class="active"{% endif %}><a href="/donate.html"><i class="icon-heart icon-white"></i> Donate</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
