@@ -1,0 +1,10 @@
+article.post {
+  margin-bottom: 2em; }
+  article.post footer ul, article.post footer li {
+    display: inline;
+    margin: 0;
+    padding: 0; }
+  article.post footer li:before {
+    content: ", "; }
+  article.post footer li:first-child:before {
+    display: none; }

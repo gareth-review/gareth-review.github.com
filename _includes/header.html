@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>{{ page.title }}</title>
+		<title>{% if page.title %}{{ page.title }} - {% endif %}{% if active == "blog" %}Blog - {% endif %}Gareth, the gentle git code review system</title>
 
 		<link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap.min.css">
 		<style type="text/css">
@@ -13,6 +13,7 @@
 		</style>
 		<link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap-responsive.min.css">
 		<link rel="stylesheet" type="text/css" href="/bootstrap-image-gallery/css/bootstrap-image-gallery.min.css">
+		<link rel="stylesheet" type="text/css" href="/css/site.css">
 		<!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 	</head>
 	<body>
@@ -27,9 +28,10 @@
 					<a class="brand" href="/">Gareth</a>
 					<div class="nav-collapse">
 						<ul class="nav">
-							<li{% if page.id == "home" %} class="active"{% endif %}><a href="/"><i class="icon-home icon-white"></i> Home</a></li>
-							<li{% if page.id == "screenshots" %} class="active"{% endif %}><a href="/screenshots.html"><i class="icon-picture icon-white"></i> Screnshots</a></li>
-							<li{% if page.id == "donate" %} class="active"{% endif %}><a href="/donate.html"><i class="icon-heart icon-white"></i> Donate</a></li>
+							<li{% if active == "home" %} class="active"{% endif %}><a href="/"><i class="icon-home icon-white"></i> Home</a></li>
+							<li{% if active == "screenshots" %} class="active"{% endif %}><a href="/screenshots.html"><i class="icon-picture icon-white"></i> Screnshots</a></li>
+							<li{% if active == "donate" %} class="active"{% endif %}><a href="/donate.html"><i class="icon-heart icon-white"></i> Donate</a></li>
+							<li{% if active == "blog" %} class="active"{% endif %}><a href="/blog/"><i class="icon-list icon-white"></i> Blog</a></li>
 						</ul>
 					</div>
 				</div>
