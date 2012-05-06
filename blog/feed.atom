@@ -1,0 +1,29 @@
+---
+layout: nil
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+	<title type="text" xml:lang="en">{{ site.root_desc }}</title>
+	<link type="application/atom+xml" href="{{ site.url }}/blog/feed.atom" rel="self" />
+	<link type="text" href="{{ site.url }}/blog/" rel="alternate" />
+	<updated>{{ site.time | date_to_xmlschema }}</updated>
+	<id>{{ site.url }}</id>
+	<author>
+		<name>Daniel Friesen</name>
+		<email>gareth@danielfriesen.name</email>
+	</author>
+	<rights>Copyright © 2012 — Daniel Friesen</rights>
+
+	{% for post in site.posts limit:20 %}
+	<entry>
+		<title>{{ post.title | xml_escape }}</title>
+		<link href="{{ site.url }}{{ post.url }}"/>
+		<updated>{{ post.date | date_to_xmlschema }}</updated>
+		<id>{{ site.url }}{{ post.id }}</id>
+		<content type="html">{{ post.content | xml_escape }}</content>
+		{% for category in post.categories %}
+		<category scheme="{{ site.url }}/blog/category/" term="{{ category | xml_escape }}.html" label="{{ category | xml_escape }}" />
+		{% endfor %}
+	</entry>
+	{% endfor %}
+</feed>

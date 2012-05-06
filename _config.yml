@@ -2,3 +2,6 @@ safe: true
 lsi: false
 pygments: true
 permalink: /blog/:year/:month/:day/:title/
+name: Gareth
+description: The gentle git code review system
+url: http://gareth-review.com
